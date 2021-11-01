@@ -1,6 +1,6 @@
 import express from 'express'
 import Startup from './Startup'
-import DbContext from './db/DbConfig'
+// import DbContext from './db/DbConfig'
 import { logger } from './utils/Logger'
 
 // create server & socketServer
@@ -12,7 +12,7 @@ Startup.ConfigureGlobalMiddleware(app)
 Startup.ConfigureRoutes(app)
 
 // Connect to AtlasDB
-DbContext.connect()
+// DbContext.connect()
 
 // Start Server
 app.listen(port, () => {
